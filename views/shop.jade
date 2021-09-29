@@ -1,0 +1,20 @@
+extends layout
+
+block content
+	main(class="l-main")
+		section( class="container section")
+			h2( class="section-title") Productos
+
+			div( class=" vendidos__container bd-grid")
+				-if(data.length)
+					-each producto in data
+						article(class="produto")
+							img(class="produto_img" src="#{producto.image}", alt="#{producto.title}")
+							span( class="produto__name") #{producto.title}
+							span( class="produto__preci") $ #{producto.price}
+							a( href="" class="button-light") Agregar al Carrito 
+								i( class='bx bx-right-arrow-alt button-icon')
+				-else
+					p.error No existen Películas en la Base de Datos.
+
+		include footer

@@ -1,0 +1,205 @@
+extends layout
+
+block content
+
+	main(class="l-main")
+
+		//- <!--===== HOME =====-->
+		section( class="home" id="home") 
+			div( class="home__container bd-grid")
+				div( class="home__sneaker")
+					div( class="home__shape")
+					img( src="img/home.png" alt="" class="home__img")
+
+				div( class="home__data")
+					//- span( class="home__new") New in 
+					h1( class="home__title") Tu Tienda 
+						br( class="br") 
+						| Vape Favorita
+					p( class="home__description") TIENDA ONLINE DE VAPEADORES & E-LIQUITS
+					a( href="#" class="button") NUEVOS PRODUCTOS
+
+				div( class="home__social")
+					div(class="nav__sho")
+						i( class='bx bxl-whatsapp')
+					div(class="nav__sho")
+						i( class='bx bxl-instagram-alt')
+					div(class="nav__sho")
+						i( class='bx bxl-facebook-circle')
+
+		section( class="section sabores")
+			div( class="sabores__card")
+				h2 SABORES EXCLUSIVOS
+				img( src="img/smoke02.jpg" class="sabor__img")
+			div( class="sabores__data") 
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo rem fuga, minima aperiam sapiente nostrum consequuntur id accusamus, reiciendis rerum nam voluptatem odio iusto aspernatur beatae laudantium labore est quia!
+
+		
+		//- <!--===== FEATURED =====-->
+		section(class="featured section" id="productos")
+			h2( class="section-title") PRODUCTOS
+
+			div(class="featured__container bd-grid")
+
+				article( class="produto")
+					div( class="produto__sale") -15%
+					img(src="img/vape01.png" alt="" class="produto__img")
+					span( class="produto__name") Voopoo Drag 3
+					span( class="produto__preci") $1490.00
+					a( href="" class="button-light") Ver Detalles  
+						i( class='bx bx-right-arrow-alt button-icon')
+
+				article( class="produto")
+					div( class="produto__sale") -10%
+					img(src="img/vape08.png" alt="" class="produto__img")
+					span( class="produto__name") Gen Nano Kit
+					span( class="produto__preci") $1590.00
+					a( href="" class="button-light") Ver Detalles 
+						i( class='bx bx-right-arrow-alt button-icon')
+
+				article( class="produto")
+					div( class="produto__sale") -10%
+					img(src="img/vape02.png" alt="" class="produto__img")
+					span( class="produto__name") Suorin Air
+					span( class="produto__preci") $590.00
+					a( href="" class="button-light") Ver Detalles 
+						i( class='bx bx-right-arrow-alt button-icon')
+			
+			a( href="#" class="button") MÁS PRODUCTOS
+
+		div( class="training" )
+			h1 30% DE DESCUENTO
+			h2( class=" p2" id="msg_trining") EN PRODUCTOS SELECCIONADOS
+			button( class="button_training") Comprar Ahora
+
+		//- <!--===== COLLECTION =====-->
+
+		section( class="collection section")
+			h2( class="section-title") Colecciones
+			div( class="collection__container bd-grid")
+				div( class="collection__card")
+					div( class="collection__data")
+						h3( class="collection__name") Vapeadores
+						p( class="collection__description") Colección 2021
+						a( href="" class="button-light") Ver Más
+							i( class='bx bx-right-arrow-alt button-icon')
+					img( src="img/vape05.png" alt="" class="collection__img")
+
+				div( class="collection__card")
+					div( class="collection__data")
+						h3( class="collection__name") E-Liquids
+						p( class="collection__description") Coleccion 2021
+						a( href="" class="button-light") Ver Más 	
+							i( class='bx bx-right-arrow-alt button-icon')
+					img( src="img/liquid01.png" alt="" class="collection__img")
+				
+		//- <!--===== MAS VENDIDOS =====-->
+		section( class="vendidos section" id="vendidos")
+			h2( class="section-title") Más Vendidos
+
+			div( class="vendidos__container bd-grid")
+				article( class="produto")
+					img( src="img/vape06.png" alt="" class="produto__img")
+					span( class="produto__name") Voopoo Drag Mod
+					span( class="produto__preci") $14,900.00
+					a( href="" class="button-light") Agregar al Carrito 
+						i( class='bx bx-right-arrow-alt button-icon')
+				
+				article( class="produto")
+					img( src="img/vape02.png" alt="" class="produto__img")
+					span( class="produto__name") Suorin Air
+					span( class="produto__preci") $590.00
+					a( href="" class="button-light") Agregar al Carrito 
+						i( class='bx bx-right-arrow-alt button-icon')
+
+				article( class="produto")
+					img( src="img/liquid02.png" alt="" class="produto__img")
+					span( class="produto__name") AUNT MERINGUE 1984
+					span( class="produto__preci") $350.00
+					a( href="" class="button-light") Agregar al Carrito 
+						i( class='bx bx-right-arrow-alt button-icon')
+
+				article( class="produto")
+					img( src="img/vape07.png" alt="" class="produto__img")
+					span( class="produto__name") UUMI PRO
+					span( class="produto__preci") $350.00
+					a( href="" class="button-light") Agregar al Carrito 
+						i( class='bx bx-right-arrow-alt button-icon')
+
+			a( href="#" class="button") MÁS PRODUCTOS
+		//- <!--===== TESTIMONIAL =====-->
+
+		section( class="testimonial section bd-container")
+			h2( class="section-title") Testimonios
+			div( class="testimonial__container swiper-container")
+				div( class="swiper-wrapper")
+					div( class="testimonial__content swiper-slide")
+						img( src="img/testimonial1.png" alt="" class="testimonial__img")
+						h3( class="testimonial__title") Luis Alcazar 
+						span( class="place__rating")
+						span( class="place__rating-number") 4,5
+							div( class='testimonial__star') 
+								i( class='bx bxs-star')
+								i( class='bx bxs-star')
+								i( class='bx bxs-star')
+								i( class='bx bxs-star')
+								i( class='bx bxs-star-half')
+						p( class="testimonial__description") Excelente sabor, super fresco y ligero, 10/10 super recomendado
+
+					div( class="testimonial__content swiper-slide")
+						img( src="img/testimonial2.png" alt="" class="testimonial__img")
+						h3( class="testimonial__title") Sandra Echeverría
+						span( class="place__rating-number") 4,5
+							div 
+								i( class='bx bxs-star')
+								i( class='bx bxs-star')
+								i( class='bx bxs-star')
+								i( class='bx bxs-star')
+								i( class='bx bxs-star-half')
+						p( class="testimonial__description") Excelente sabor, super fresco y ligero, 10/10 super recomendado
+
+					div( class="testimonial__content swiper-slide")
+						img( src="img/testimonial3.jpg" alt="" class="testimonial__img")
+						h3( class="testimonial__title") Carlos Montes
+						span( class="place__rating-number") 4,5
+							div 
+								i( class='bx bxs-star')
+								i( class='bx bxs-star')
+								i( class='bx bxs-star')
+								i( class='bx bxs-star')
+								i( class='bx bxs-star-half')
+						p( class="testimonial__description") Excelente sabor, super fresco y ligero, 10/10 super recomendado
+	
+				div( class="swiper-pagination")
+
+		//- <!--===== NEWSLETTER =====-->
+
+		section( class="newsletter " id="contacto")
+			div( class="newsletter__container bd-grid")
+				div
+					h3( class="newsletter__title") Subscribete a nuestro <br> boletin
+					p( class="newsletter_description") y obten un 10% de descuento en nuestros productos
+				form( action="" class="newsletter__subscribe")
+					input( type="text" placeholder="@email.com" class="newsletter__input")
+					a( href="#" class="button") Subscribe
+		
+		//- <!--==================== SPONSORS ====================-->
+		section( class="sponsor section")
+			div( class="sponsor__container container bd-grid")
+				div( class="sponsor__content")
+					img( src="img/sponsors4.png" alt="" class="sponsor__img")
+				div( class="sponsor__content")
+					img( src="img/sponsors2.png" alt="" class="sponsor__img")
+				div( class="sponsor__content")
+					img( src="img/sponsors3.png" alt="" class="sponsor__img")
+				div( class="sponsor__content")
+					img( src="img/sponsors1.png" alt="" class="sponsor__img")
+	//- <!--===== FOOTER =====-->
+	include footer
+	
+	//- <!-- ====== SWIPER JS ====== -->
+
+	script( src="js/swiper-bundle.min.js")
+
+	//- <!-- ===== MAIN JS ===== -->
+	script( src="js/main.js")

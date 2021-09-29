@@ -1,0 +1,41 @@
+extends layout
+
+block content
+	main(class="l-main")
+		section( class="container section")
+			h2( class="section-title") Más Vendidos
+
+			div( class="vendidos__container bd-grid")
+
+				article( class="produto")
+					-if(data.length)
+						table.table
+							tr
+								th Id
+								th Título
+								th Puntuación
+								th Poster
+								th(colspan="2")
+									form(method="GET" action="/agregar")
+										input.button.add(type="submit", value="Agregar")
+							-each producto in data
+								tr
+									td #{producto.vape_id}
+									td #{producto.title}
+									td #{producto.rating}
+									td
+										img.poster(src="#{producto.image}", alt="#{producto.title}")
+									td
+										form(method="GET" action="/editar/#{producto.vape_id}")
+											input.button.edit(type="submit", value="Editar")
+									td
+										form(method="POST" action="/eliminar/#{producto.vape_id}")
+											input.button.delete(type="button", value="Eliminar" onclick="eliminar(this)")
+						script.
+							function eliminar(input)
+							{
+								var deleteOk = confirm('¿Estás seguro de eliminar la película?')
+								return (deleteOk) ? input.parentNode.submit() : false
+							}
+					-else
+						p.error No existen Películas en la Base de Datos.

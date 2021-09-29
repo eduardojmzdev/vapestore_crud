@@ -1,0 +1,29 @@
+extends layout
+
+block content
+	main(class="l-main")
+		section(class="container section")
+			include header
+			div.item
+				form(class="form" method="POST" action="/inserta" enctype="multipart/form-data")
+
+					div.container
+						label(for="movie_id") ID Producto:
+						input(class="form__input", type="text", name="vape_id", required)
+					div.container
+						label(for="title") Nombre:
+						input(class="form__input", type="text", name="title", required)
+					div.container
+						label(for="description") Descripcion:
+						input(class="form__input", type="text", name="description", required)
+					div.container
+						label(for="price") Precio:
+						input(class="form__input", type="number", name="price", placeholder="ej. 10" required)
+					div.container
+						label(for="rating") Calificación:
+						input(class="form__input", type="number", name="rating", required)
+					div.container
+						label(class="file" for="image") Poster:
+							input(class="form__input ", type="file", name="image", required)
+					div.container
+						input(class="button" type="submit", value="AGREGAR")
